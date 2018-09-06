@@ -1,3 +1,4 @@
+ENV['RUBY_DEP_GEM_SILENCE_WARNINGS'] = '1'
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -17,8 +18,7 @@ gem 'puma', '~> 3.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -31,6 +31,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

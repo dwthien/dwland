@@ -20,6 +20,8 @@ gem 'puma', '~> 3.7'
 # Use ActiveModel has_secure_password
 gem 'devise'
 gem 'grape'
+gem 'figaro'
+gem 'faker', '~> 1.9', '>= 1.9.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -33,7 +35,13 @@ end
 
 group :development do
   gem 'grape_on_rails_routes'
-  gem 'faker', '~> 1.9', '>= 1.9.1'
+
+  gem "capistrano"
+  gem "capistrano3-puma"
+  gem "capistrano-rails", require: false
+  gem "capistrano-bundler", require: false
+  gem "capistrano-rvm"
+
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

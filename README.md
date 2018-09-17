@@ -11,6 +11,12 @@ Things you may want to cover:
 
 * Configuration
 
+- bundle exec figaro install
+- mkdir on server app_project/shared/config/application.yml
+- RAILS_ENV=production rake secret (cp into application.yml)
+- sudo -u postgres createdb <dbname>
+- RAILS_ENV=production rake db:seed
+
 * Database creation
 
 * Database initialization
